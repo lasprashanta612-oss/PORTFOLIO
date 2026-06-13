@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prashant Rana Magar – Freelance Web Developer, Web Designer & AI Expert from Pokhara, Nepal." />
+  <meta name="keywords" content="Prashant Rana Magar, Web Developer, Web Designer, AI Expert, Freelancer, Pokhara Nepal, Portfolio" />
+  <meta name="author" content="Prashant Rana Magar" />
+  <title>Prashant Rana Magar | Web Developer & AI Expert</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ LOADER ═══════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">PR</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-text">Loading Portfolio…</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ SCROLL PROGRESS ═══════════════════════════════════════ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══════════════════════════════════════ CURSOR ═══════════════════════════════════════ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ═══════════════════════════════════════ NAVBAR ═══════════════════════════════════════ -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">PR<span class="logo-dot">.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="ri-sun-line" id="theme-icon"></i>
+        </button>
+        <a href="#contact" class="btn-hire">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════ HERO ═══════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Nepal mountain silhouette accent -->
+    <div class="hero-mountain" aria-hidden="true">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,320 L0,220 L180,80 L300,160 L480,40 L600,140 L720,20 L840,120 L960,50 L1100,150 L1260,60 L1440,140 L1440,320 Z" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <!-- Freelance badge -->
+      <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+        <span class="badge-pulse"></span>
+        <i class="ri-checkbox-circle-line"></i> Available For Freelance Work
+      </div>
+
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+        Hi, I'm <br />
+        <span class="typed-wrapper">
+          <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </span>
+      </h1>
+
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">
+        Passionate IT Enthusiast & Freelancer from <strong>Pokhara, Nepal</strong> — crafting modern digital experiences through code, design, and AI.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+        <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" class="btn-primary">
+          <i class="ri-user-add-line"></i> Hire Me
+        </a>
+        <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" class="btn-secondary">
+          <i class="ri-message-2-line"></i> Contact Me
+        </a>
+        <a href="#portfolio" class="btn-outline">
+          <i class="ri-eye-line"></i> View Projects
+        </a>
+        <a href="#" class="btn-outline" id="download-cv">
+          <i class="ri-download-2-line"></i> Download CV
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="700">
+        <div class="stat">
+          <span class="stat-num" data-target="1">0</span><span>+</span>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="20">0</span><span>+</span>
+          <p>Projects Done</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="15">0</span><span>+</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="10">0</span><span>+</span>
+          <p>Services Offered</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile image -->
+    <div class="hero-image-wrap" data-aos="fade-left" data-aos-delay="400">
+      <div class="hero-image-glow"></div>
+      <div class="hero-image-frame">
+        <div class="profile-placeholder">
+          <i class="ri-user-3-line"></i>
+          <p>Profile Photo</p>
+        </div>
+      </div>
+      <div class="hero-image-rings">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-wheel"></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ ABOUT ═══════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Get To Know Me</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Image side -->
+        <div class="about-visual" data-aos="fade-right">
+          <div class="about-image-wrap">
+            <div class="about-placeholder">
+              <i class="ri-user-3-line"></i>
+            </div>
+            <div class="about-tag tag-1"><i class="ri-code-s-slash-line"></i> Web Dev</div>
+            <div class="about-tag tag-2"><i class="ri-robot-line"></i> AI Expert</div>
+            <div class="about-badge-count">
+              <span>1+</span><small>Year Exp.</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="about-content" data-aos="fade-left">
+          <h3>I Build Digital Solutions That <span class="accent">Actually Work</span></h3>
+          <p class="about-lead">
+            I'm Prashant Rana Magar, a 16+ year-old freelancer and IT enthusiast based in Pokhara, Nepal. I specialize in building modern, responsive websites and leveraging AI tools to help businesses grow their online presence.
+          </p>
+          <p>
+            Over the past year, I've partnered with local shops and clients across Nepal to create, redesign, and optimize websites that are fast, beautiful, and functional. I believe great design should be accessible to every business — no matter how big or small.
+          </p>
+
+          <!-- Info card -->
+          <div class="info-card glass">
+            <div class="info-item">
+              <i class="ri-calendar-line"></i>
+              <div><span>Age</span><strong>16+</strong></div>
+            </div>
+            <div class="info-item">
+              <i class="ri-map-pin-line"></i>
+              <div><span>Location</span><strong>Pokhara, Nepal</strong></div>
+            </div>
+            <div class="info-item">
+              <i class="ri-graduation-cap-line"></i>
+              <div><span>Qualification</span><strong>SEE — A Grade</strong></div>
+            </div>
+            <div class="info-item">
+              <i class="ri-briefcase-line"></i>
+              <div><span>Experience</span><strong>1+ Year</strong></div>
+            </div>
+            <div class="info-item">
+              <i class="ri-mail-line"></i>
+              <div><span>Email</span><strong>lasprashanta612@gmail.com</strong></div>
+            </div>
+            <div class="info-item">
+              <i class="ri-checkbox-circle-line"></i>
+              <div><span>Status</span><strong class="available">Open to Work</strong></div>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn-primary"><i class="ri-message-2-line"></i> Let's Talk</a>
+            <a href="#portfolio" class="btn-outline"><i class="ri-folder-open-line"></i> My Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ EDUCATION ═══════════════════════════════════════ -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">My Background</span>
+        <h2 class="section-title">Education <span class="accent">&amp; Learning</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline" data-aos="fade-up">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="ri-award-line"></i></div>
+          <div class="timeline-card glass">
+            <span class="timeline-year">2024</span>
+            <h4>SEE (Secondary Education Examination)</h4>
+            <p>Completed with <strong>A Grade</strong> — demonstrating academic excellence in Nepal's national board examination.</p>
+            <div class="timeline-tags"><span>Academic</span><span>A Grade</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="ri-book-open-line"></i></div>
+          <div class="timeline-card glass">
+            <span class="timeline-year">2024–Present</span>
+            <h4>Higher Secondary Education</h4>
+            <p>Continuing formal education while actively building real-world experience in web development and design.</p>
+            <div class="timeline-tags"><span>Ongoing</span><span>+2 Level</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="ri-code-box-line"></i></div>
+          <div class="timeline-card glass">
+            <span class="timeline-year">2023–Present</span>
+            <h4>Self-Learning in Web Development</h4>
+            <p>Mastered HTML, CSS, JavaScript, responsive design, and modern frameworks through hands-on projects and online resources.</p>
+            <div class="timeline-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Responsive</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="ri-robot-2-line"></i></div>
+          <div class="timeline-card glass">
+            <span class="timeline-year">2023–Present</span>
+            <h4>Continuous Learning in AI &amp; Technology</h4>
+            <p>Exploring and applying cutting-edge AI tools, prompt engineering, and digital design to deliver smarter client solutions.</p>
+            <div class="timeline-tags"><span>AI Tools</span><span>Prompt Eng.</span><span>Design</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ SKILLS ═══════════════════════════════════════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">What I'm Good At</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Circular skill indicators -->
+      <div class="skills-circles" data-aos="fade-up">
+        <div class="skill-circle-item">
+          <div class="skill-circle" data-percent="95">
+            <svg><circle class="bg" cx="60" cy="60" r="52"/><circle class="fill" cx="60" cy="60" r="52"/></svg>
+            <span class="skill-circle-num">95%</span>
+          </div>
+          <p>AI Tools</p>
+        </div>
+        <div class="skill-circle-item">
+          <div class="skill-circle" data-percent="90">
+            <svg><circle class="bg" cx="60" cy="60" r="52"/><circle class="fill" cx="60" cy="60" r="52"/></svg>
+            <span class="skill-circle-num">90%</span>
+          </div>
+          <p>Web Dev</p>
+        </div>
+        <div class="skill-circle-item">
+          <div class="skill-circle" data-percent="92">
+            <svg><circle class="bg" cx="60" cy="60" r="52"/><circle class="fill" cx="60" cy="60" r="52"/></svg>
+            <span class="skill-circle-num">92%</span>
+          </div>
+          <p>Web Design</p>
+        </div>
+        <div class="skill-circle-item">
+          <div class="skill-circle" data-percent="88">
+            <svg><circle class="bg" cx="60" cy="60" r="52"/><circle class="fill" cx="60" cy="60" r="52"/></svg>
+            <span class="skill-circle-num">88%</span>
+          </div>
+          <p>Thumbnail</p>
+        </div>
+        <div class="skill-circle-item">
+          <div class="skill-circle" data-percent="85">
+            <svg><circle class="bg" cx="60" cy="60" r="52"/><circle class="fill" cx="60" cy="60" r="52"/></svg>
+            <span class="skill-circle-num">85%</span>
+          </div>
+          <p>UI/UX</p>
+        </div>
+        <div class="skill-circle-item">
+          <div class="skill-circle" data-percent="80">
+            <svg><circle class="bg" cx="60" cy="60" r="52"/><circle class="fill" cx="60" cy="60" r="52"/></svg>
+            <span class="skill-circle-num">80%</span>
+          </div>
+          <p>Graphic Design</p>
+        </div>
+      </div>
+
+      <!-- Bar skills -->
+      <div class="skills-bars" data-aos="fade-up">
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>AI Tools &amp; Prompt Engineering</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Web Design</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Web Development</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Thumbnail Design</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>UI/UX Design</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Graphic Design</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ SERVICES ═══════════════════════════════════════ -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">What I Offer</span>
+        <h2 class="section-title">My <span class="accent">Services</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="50">
+          <div class="service-icon"><i class="ri-code-s-slash-line"></i></div>
+          <h4>Website Development</h4>
+          <p>Custom, clean-coded websites built from scratch with modern tech. Fast, secure, and scalable.</p>
+          <div class="service-hover-details">HTML · CSS · JavaScript · Responsive</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="ri-palette-line"></i></div>
+          <h4>Website Design</h4>
+          <p>Stunning visual layouts that capture your brand identity and keep visitors engaged.</p>
+          <div class="service-hover-details">Figma · Canva · UI Design · Branding</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="150">
+          <div class="service-icon"><i class="ri-layout-line"></i></div>
+          <h4>Landing Page Design</h4>
+          <p>High-converting landing pages optimized for performance and user engagement.</p>
+          <div class="service-hover-details">CTA · A/B · Conversion · Speed</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="ri-user-star-line"></i></div>
+          <h4>Portfolio Websites</h4>
+          <p>Showcase your work professionally. Personal and freelancer portfolios that stand out.</p>
+          <div class="service-hover-details">Personal · Freelancer · Creative</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="250">
+          <div class="service-icon"><i class="ri-store-2-line"></i></div>
+          <h4>Business Websites</h4>
+          <p>Professional websites that help local businesses and shops attract more customers online.</p>
+          <div class="service-hover-details">Local SEO · Contact · Maps · Trust</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="ri-refresh-line"></i></div>
+          <h4>Website Redesign</h4>
+          <p>Give your old website a fresh, modern look that reflects your current brand.</p>
+          <div class="service-hover-details">Modernize · Speed · UX Refresh</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="350">
+          <div class="service-icon"><i class="ri-robot-line"></i></div>
+          <h4>AI Assistance</h4>
+          <p>Integrate AI tools, chatbots, and automation into your digital workflow.</p>
+          <div class="service-hover-details">ChatGPT · Automation · Prompts</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon"><i class="ri-image-line"></i></div>
+          <h4>Thumbnail Design</h4>
+          <p>Eye-catching YouTube thumbnails and social media graphics that drive clicks.</p>
+          <div class="service-hover-details">YouTube · Social Media · Canva</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="450">
+          <div class="service-icon"><i class="ri-pencil-ruler-2-line"></i></div>
+          <h4>UI/UX Design</h4>
+          <p>User-centered design systems and prototypes that are intuitive and delightful.</p>
+          <div class="service-hover-details">Figma · Wireframes · Prototypes</div>
+        </div>
+
+        <div class="service-card glass" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon"><i class="ri-speed-line"></i></div>
+          <h4>Website Optimization</h4>
+          <p>Improve your website's speed, performance, SEO, and mobile experience.</p>
+          <div class="service-hover-details">PageSpeed · SEO · Core Web Vitals</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ EXPERIENCE ═══════════════════════════════════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">My Journey</span>
+        <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exp-highlight-grid" data-aos="fade-up">
+        <div class="exp-highlight glass">
+          <i class="ri-briefcase-4-line"></i>
+          <span>1+</span>
+          <p>Years in IT</p>
+        </div>
+        <div class="exp-highlight glass">
+          <i class="ri-group-line"></i>
+          <span>15+</span>
+          <p>Clients Served</p>
+        </div>
+        <div class="exp-highlight glass">
+          <i class="ri-code-s-slash-line"></i>
+          <span>20+</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="exp-highlight glass">
+          <i class="ri-map-pin-line"></i>
+          <span>Pokhara</span>
+          <p>Nepal Based</p>
+        </div>
+      </div>
+
+      <div class="exp-timeline" data-aos="fade-up">
+
+        <div class="exp-card glass">
+          <div class="exp-icon"><i class="ri-computer-line"></i></div>
+          <div class="exp-body">
+            <div class="exp-meta"><span class="exp-role">Freelance Web Developer &amp; Designer</span><span class="exp-period">2023 – Present</span></div>
+            <p>Designed and developed custom websites for local shops, businesses, and individual clients across Pokhara. Focused on mobile-first, fast-loading sites with professional aesthetics.</p>
+            <div class="exp-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>UI Design</span></div>
+          </div>
+        </div>
+
+        <div class="exp-card glass">
+          <div class="exp-icon"><i class="ri-store-line"></i></div>
+          <div class="exp-body">
+            <div class="exp-meta"><span class="exp-role">Local Business Website Projects</span><span class="exp-period">2023 – Present</span></div>
+            <p>Partnered with multiple local shops in Pokhara to build their first websites — helping them establish an online presence and attract digital customers.</p>
+            <div class="exp-tags"><span>Business Sites</span><span>Local SEO</span><span>Responsive</span></div>
+          </div>
+        </div>
+
+        <div class="exp-card glass">
+          <div class="exp-icon"><i class="ri-refresh-line"></i></div>
+          <div class="exp-body">
+            <div class="exp-meta"><span class="exp-role">Website Redesign Specialist</span><span class="exp-period">2024 – Present</span></div>
+            <p>Modernized outdated client websites with improved design, better performance scores, and enhanced user experience across all devices.</p>
+            <div class="exp-tags"><span>Redesign</span><span>Optimization</span><span>UX</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PORTFOLIO ═══════════════════════════════════════ -->
+  <section id="portfolio" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">My Work</span>
+        <h2 class="section-title">Recent <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="portfolio-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+        <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+        <button class="filter-btn" data-filter="landing">Landing Page</button>
+        <button class="filter-btn" data-filter="design">Web Design</button>
+      </div>
+
+      <!-- Project Cards -->
+      <div class="portfolio-grid" id="portfolio-grid" data-aos="fade-up">
+
+        <div class="project-card glass" data-category="business">
+          <div class="project-img"><i class="ri-store-2-line"></i><span>Business</span></div>
+          <div class="project-info">
+            <h4>Local Shop Website</h4>
+            <p>Multi-page business site for a Pokhara-based retail shop. Mobile-first design with contact form.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm"><i class="ri-eye-line"></i> Preview</a>
+              <a href="#" class="btn-sm outline"><i class="ri-github-line"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="portfolio">
+          <div class="project-img"><i class="ri-user-star-line"></i><span>Portfolio</span></div>
+          <div class="project-info">
+            <h4>Creative Portfolio Site</h4>
+            <p>Personal portfolio for a photographer in Pokhara. Dark theme with gallery and booking form.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>Gallery</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm"><i class="ri-eye-line"></i> Preview</a>
+              <a href="#" class="btn-sm outline"><i class="ri-github-line"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="landing">
+          <div class="project-img"><i class="ri-layout-line"></i><span>Landing</span></div>
+          <div class="project-info">
+            <h4>Product Landing Page</h4>
+            <p>High-converting landing page for a local product launch. Animated sections and CTA optimization.</p>
+            <div class="project-tags"><span>Landing</span><span>CTA</span><span>Animated</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm"><i class="ri-eye-line"></i> Preview</a>
+              <a href="#" class="btn-sm outline"><i class="ri-github-line"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="business">
+          <div class="project-img"><i class="ri-restaurant-line"></i><span>Business</span></div>
+          <div class="project-info">
+            <h4>Restaurant Website</h4>
+            <p>Elegant restaurant site with menu display, location map, and reservation contact form.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>Maps</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm"><i class="ri-eye-line"></i> Preview</a>
+              <a href="#" class="btn-sm outline"><i class="ri-github-line"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="design">
+          <div class="project-img"><i class="ri-palette-line"></i><span>Design</span></div>
+          <div class="project-info">
+            <h4>Brand Website Redesign</h4>
+            <p>Complete redesign of an existing business website. Improved UX, mobile responsiveness, and speed.</p>
+            <div class="project-tags"><span>Redesign</span><span>UX</span><span>Optimization</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm"><i class="ri-eye-line"></i> Preview</a>
+              <a href="#" class="btn-sm outline"><i class="ri-github-line"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-category="portfolio">
+          <div class="project-img"><i class="ri-artboard-line"></i><span>Portfolio</span></div>
+          <div class="project-info">
+            <h4>Freelancer Portfolio</h4>
+            <p>Modern dark-themed portfolio for a freelance designer. Smooth animations and project showcase.</p>
+            <div class="project-tags"><span>Portfolio</span><span>Dark Theme</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm"><i class="ri-eye-line"></i> Preview</a>
+              <a href="#" class="btn-sm outline"><i class="ri-github-line"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PRICING ═══════════════════════════════════════ -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Transparent &amp; Fair</span>
+        <h2 class="section-title">Pricing <span class="accent">Packages</span></h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Every project is unique — these are starting points. Contact me to discuss your needs.</p>
+      </div>
+
+      <div class="pricing-grid" data-aos="fade-up">
+
+        <!-- Basic -->
+        <div class="pricing-card glass">
+          <div class="pricing-icon"><i class="ri-seedling-line"></i></div>
+          <h4>Basic</h4>
+          <div class="pricing-price">
+            <span class="currency">Rs.</span>
+            <span class="amount">2,000</span>
+            <span class="range">– 5,000</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="ri-check-line"></i> Simple 1–3 Page Website</li>
+            <li><i class="ri-check-line"></i> Mobile Responsive</li>
+            <li><i class="ri-check-line"></i> Contact Form</li>
+            <li><i class="ri-check-line"></i> Basic Modern Design</li>
+            <li><i class="ri-check-line"></i> Fast Delivery (3–5 days)</li>
+            <li class="muted"><i class="ri-close-line"></i> SEO Optimization</li>
+            <li class="muted"><i class="ri-close-line"></i> Premium UI</li>
+          </ul>
+          <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" class="btn-outline full-w">Get Started</a>
+        </div>
+
+        <!-- Standard (Popular) -->
+        <div class="pricing-card glass featured">
+          <div class="popular-badge"><i class="ri-fire-line"></i> Most Popular</div>
+          <div class="pricing-icon"><i class="ri-rocket-line"></i></div>
+          <h4>Standard</h4>
+          <div class="pricing-price">
+            <span class="currency">Rs.</span>
+            <span class="amount">5,000</span>
+            <span class="range">– 15,000</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="ri-check-line"></i> Multi-page Website</li>
+            <li><i class="ri-check-line"></i> Premium Design</li>
+            <li><i class="ri-check-line"></i> Fully Responsive</li>
+            <li><i class="ri-check-line"></i> SEO Basics</li>
+            <li><i class="ri-check-line"></i> Better Performance</li>
+            <li><i class="ri-check-line"></i> Contact &amp; Forms</li>
+            <li class="muted"><i class="ri-close-line"></i> Priority Support</li>
+          </ul>
+          <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" class="btn-primary full-w">Get Started</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="pricing-card glass">
+          <div class="pricing-icon"><i class="ri-vip-crown-line"></i></div>
+          <h4>Premium</h4>
+          <div class="pricing-price">
+            <span class="currency">Rs.</span>
+            <span class="amount">15,000</span>
+            <span class="range">+</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="ri-check-line"></i> Custom Website</li>
+            <li><i class="ri-check-line"></i> Advanced Features</li>
+            <li><i class="ri-check-line"></i> Premium UI/UX</li>
+            <li><i class="ri-check-line"></i> Full Optimization</li>
+            <li><i class="ri-check-line"></i> Priority Support</li>
+            <li><i class="ri-check-line"></i> SEO Advanced</li>
+            <li><i class="ri-check-line"></i> Post-launch Support</li>
+          </ul>
+          <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" class="btn-outline full-w">Get Started</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ TESTIMONIALS ═══════════════════════════════════════ -->
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Client Feedback</span>
+        <h2 class="section-title">What Clients <span class="accent">Say</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="testimonial-carousel" data-aos="fade-up">
+        <div class="testimonial-track" id="testimonial-track">
+
+          <div class="testimonial-card glass">
+            <div class="stars">★★★★★</div>
+            <p>"Prashant built our shop website in just 4 days. It looks amazing and our customers can now find us online easily. Highly recommend!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RK</div>
+              <div><strong>Rajesh K.</strong><span>Local Shop Owner, Pokhara</span></div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass">
+            <div class="stars">★★★★★</div>
+            <p>"Very professional and responsive. He redesigned our old website and it's now fast, modern, and mobile-friendly. Great value for money!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div><strong>Sunita M.</strong><span>Business Owner, Pokhara</span></div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass">
+            <div class="stars">★★★★★</div>
+            <p>"Prashant is talented for his age. He created a beautiful portfolio site for me and even helped with AI tools. Truly skilled!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AB</div>
+              <div><strong>Aaditya B.</strong><span>Freelancer, Nepal</span></div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass">
+            <div class="stars">★★★★★</div>
+            <p>"The landing page he created helped us get more online inquiries. Clean design, fast loading, and delivered ahead of schedule!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PD</div>
+              <div><strong>Priya D.</strong><span>Restaurant Owner, Pokhara</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-controls">
+          <button id="prev-btn" aria-label="Previous"><i class="ri-arrow-left-line"></i></button>
+          <div class="testimonial-dots" id="testimonial-dots"></div>
+          <button id="next-btn" aria-label="Next"><i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CONTACT ═══════════════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Let's Work Together</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Ready to start your project?</h3>
+          <p>Whether you need a brand new website, a redesign, or AI integration — I'm here to help. Reach out and let's build something great together.</p>
+
+          <div class="contact-details">
+            <a href="mailto:lasprashanta612@gmail.com" class="contact-item glass">
+              <div class="ci-icon"><i class="ri-mail-line"></i></div>
+              <div><span>Email</span><strong>lasprashanta612@gmail.com</strong></div>
+            </a>
+            <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" class="contact-item glass">
+              <div class="ci-icon"><i class="ri-instagram-line"></i></div>
+              <div><span>Instagram</span><strong>@prashant_rm12</strong></div>
+            </a>
+            <a href="https://linkedin.com/in/Prashant_mgr7" target="_blank" rel="noopener" class="contact-item glass">
+              <div class="ci-icon"><i class="ri-linkedin-line"></i></div>
+              <div><span>LinkedIn</span><strong>Prashant_mgr7</strong></div>
+            </a>
+            <div class="contact-item glass">
+              <div class="ci-icon"><i class="ri-map-pin-line"></i></div>
+              <div><span>Location</span><strong>Pokhara, Nepal</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <form class="contact-form glass" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Web Development Project" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-w">
+              <i class="ri-send-plane-line"></i> Send Message
+            </button>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo large">PR<span class="logo-dot">.</span></a>
+          <p>Prashant Rana Magar — Freelance Web Developer & AI Expert based in Pokhara, Nepal. Building modern digital solutions for businesses worldwide.</p>
+          <div class="social-links">
+            <a href="mailto:lasprashanta612@gmail.com" aria-label="Email"><i class="ri-mail-line"></i></a>
+            <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://linkedin.com/in/Prashant_mgr7" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Web Design</a></li>
+            <li><a href="#services">Landing Pages</a></li>
+            <li><a href="#services">AI Assistance</a></li>
+            <li><a href="#services">Thumbnail Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><i class="ri-mail-line"></i> lasprashanta612@gmail.com</li>
+            <li><i class="ri-map-pin-line"></i> Pokhara, Nepal</li>
+            <li><i class="ri-instagram-line"></i> @prashant_rm12</li>
+            <li><i class="ri-linkedin-line"></i> Prashant_mgr7</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Prashant Rana Magar. All Rights Reserved.</p>
+        <p>Designed &amp; Developed with <i class="ri-heart-fill"></i> in Pokhara, Nepal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════ FLOATING ELEMENTS ═══════════════════════════════════════ -->
+
+  <!-- Floating contact button -->
+  <a href="https://www.instagram.com/prashant_rm12?igsh=eTlvbzh2N2t6ZXRp" target="_blank" rel="noopener" class="float-contact" aria-label="Contact via Instagram">
+    <i class="ri-message-2-fill"></i>
+  </a>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
